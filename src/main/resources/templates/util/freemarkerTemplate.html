@@ -13,6 +13,8 @@
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 </head>
 [/#macro]
 
@@ -126,18 +128,41 @@
         <!--右侧内容部分结束-->
     </div>
 
-    [#macro alljs ]
-    <!-- 主要的脚本 -->
+    <!-- 引入脚本 -->
+    [#macro jqueryJs ]
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    [/#macro]
 
-    <!-- 自定义插件javascript-->
+    [#macro bootstrapJs ]
+    <script src="js/bootstrap.min.js"></script>
+    [/#macro]
+
+    [#macro metisMenuJs ]
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    [/#macro]
+
+    [#macro slimscrollJs ]
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    [/#macro]
+
+    [#macro inspiniaJs ]
     <script src="js/inspinia.js"></script>
+    [/#macro]
+
+    [#macro paceJs ]
     <script src="js/plugins/pace/pace.min.js"></script>
+    [/#macro]
+
+    [#macro toastrJs ]
     <!-- 通知 Toastr -->
     <script src="js/plugins/toastr/toastr.min.js"></script>
+    [/#macro]
+
+    [#macro iCheckJs ]
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    [/#macro]
+
+    [#macro welcome ]
     <script>
         $(document).ready(function() {
             setTimeout(function() {
