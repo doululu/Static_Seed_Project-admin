@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="inspinia-2.7.1汉化版" />
+        <module name="Static_Seed_Project-admin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="inspinia-2.7.1汉化版" target="1.8" />
+      <module name="Static_Seed_Project-admin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
