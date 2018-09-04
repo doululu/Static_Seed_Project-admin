@@ -1,0 +1,44 @@
+[#import "/util/freemarkerTemplate.html" as ft/]
+[@ft.head title="主页" /]
+<body>
+<div id="wrapper">
+    <!--左侧目录部分-->
+    [@ft.nav /]
+
+    <!--右侧内容部分开始-->
+    <div id="page-wrapper" class="gray-bg">
+        <!--头部分-->
+        [@ft.border /]
+        <!--内容部分-->
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center m-t-lg">
+                        <h1>
+                            欢迎使用静态网页后台模板项目
+                        </h1>
+                        <small>
+                            它是典型网络应用程序的应用程序框架。您可以使用它来快速引导这些项目的webapp项目和开发环境。
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--尾部分-->
+        [@ft.footer /]
+    </div>
+</div>
+<!--引入js-->
+[@ft.jqueryJs /]
+[@ft.bootstrapJs /]
+[@ft.metisMenuJs /]
+[@ft.inspiniaJs /]
+[@ft.paceJs /]
+[@ft.toastrJs /]
+
+[@ft.welcome /]
+
+<!--同步官网模板--用户设置-->
+[@ft.UserSettings /]
+</body>
+</html>
