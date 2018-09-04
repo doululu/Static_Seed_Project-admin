@@ -21,7 +21,7 @@ public class MyInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         boolean flag =true;
-        String ip = request.getRemoteAddr();
+        String ip = request.getRemoteAddr();   //获取用户ip
         long startTime = System.currentTimeMillis();
         request.setAttribute("requestStartTime", startTime);
         HandlerMethod handlerMethod = (HandlerMethod) handler;
