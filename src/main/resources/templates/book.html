@@ -1,0 +1,59 @@
+[#import "/util/freemarkerTemplate.html" as ft/]
+[@ft.head title="freemarker模板" /]
+<body>
+<div id="wrapper">
+    <!--左侧目录部分-->
+    [@ft.nav /]
+
+    <!--右侧内容部分开始-->
+    <div id="page-wrapper" class="gray-bg">
+        <!--头部分-->
+        [@ft.border /]
+        <!--内容部分-->
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center m-t-lg">
+                        <h1>
+                            欢迎使用后台模板
+                        </h1>
+                        <small>
+                            <table>
+                                <thead>图书信息</thead>
+                                <tbody>
+                                <tr>
+                                    <td>编号</td>
+                                    <td>名称</td>
+                                    <td>作者</td>
+                                    <td>价格</td>
+                                </tr>
+                                [#list bookList as book]
+                                <tr>
+                                    <td>${book.id}</td>
+                                    <td>${book.bookname}</td>
+                                    <td>${book.bookauthor}</td>
+                                    <td>${book.bookprice}</td>
+                                </tr>
+                                [/#list]
+                                </tbody>
+                            </table>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--尾部分-->
+        [@ft.footer /]
+    </div>
+    <!--右侧内容部分结束-->
+</div>
+
+<!--引入js-->
+[@ft.jqueryJs /]
+[@ft.bootstrapJs /]
+[@ft.metisMenuJs /]
+[@ft.inspiniaJs /]
+[@ft.paceJs /]
+[@ft.toastrJs /]
+</body>
+</html>

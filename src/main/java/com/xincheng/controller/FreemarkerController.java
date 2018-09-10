@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class FreemarkerController {
 
-    @RequestMapping(value = "/goFreemarker",method = RequestMethod.GET)
+    @RequestMapping(value = "/goFreemarker")
     public String goFreemarker(ModelMap modelMap){
 
         modelMap.put("name","张三");
