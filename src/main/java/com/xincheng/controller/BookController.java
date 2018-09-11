@@ -48,4 +48,24 @@ public class BookController {
         return "/book";
 
     }
+
+    /**
+     * 跳转到文件上传页面
+     * @return
+     */
+    @RequestMapping(value = "/fileUp")
+    public String fileUp(){
+
+        return "/fileup";
+    }
+
+    /**
+     * 进行文件上传
+     */
+    @RequestMapping(value = "/toFileUp")
+    public void toFileUp(){
+
+        System.out.println("文件上传");
+
+    }
 }
