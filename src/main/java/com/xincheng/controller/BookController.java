@@ -1,12 +1,16 @@
 package com.xincheng.controller;
 
 import com.xincheng.service.BookService;
+import com.xincheng.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -60,12 +64,22 @@ public class BookController {
     }
 
     /**
-     * 进行文件上传
+     * 处理文件上传
      */
     @RequestMapping(value = "/toFileUp")
-    public void toFileUp(){
+    @ResponseBody
+    public String toFileUp(@RequestParam(value = "file") MultipartFile file, HttpServletRequest request) { //@RequestParam 将指定的请求参数赋值给方法中的形参
+        String contentType = file.getContentType();
+        String fileName = file.getOriginalFilename();
 
-        System.out.println("文件上传");
+        String filePath ="E:\\imgupload\\";   //自定义图片上传位置
+//        String filePath = request.getSession().getServletContext().getRealPath("imgupload/");
+        try {
+            FileUtil.uploadFile(file.getBytes(), filePath, fileName);
+        } catch (Exception e) {
+        }
+        return "uploadimg success";  //返回json
 
     }
+
 }
